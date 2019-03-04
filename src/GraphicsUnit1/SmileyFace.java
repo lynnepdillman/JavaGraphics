@@ -1,10 +1,4 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-
-//Name - Lynne Dillman
-//Date - 3-2-19
-//Class - APCSA
-//Lab  - SmileyFace
+package GraphicsUnit1;
 
 import java.awt.Graphics;
 import java.awt.Color;
@@ -15,7 +9,7 @@ public class SmileyFace extends Canvas
    public SmileyFace()    //constructor - sets up the class
    {
       setSize(800,600);
-      setBackground(Color.WHITE);
+      setBackground(Color.BLACK);
       setVisible(true);
    }
 
@@ -26,18 +20,18 @@ public class SmileyFace extends Canvas
 
    public void smileyFace( Graphics window )
    {
-      window.setColor(Color.BLUE);
+      window.setColor(Color.WHITE);
       window.drawString("SMILEY FACE LAB ", 35, 35);
 
       window.setColor(Color.YELLOW);
       window.fillOval( 210, 100, 400, 400 );
       
-      //add more code here
       window.setColor(Color.BLACK);
-      window.fillOval( 310, 250, 30, 30 );
-      window.fillOval( 490, 250, 30, 30 );
-
-      window.drawArc(350, 350, 125, 75, 180, 180);
-
+      window.fillOval(310, 220, 50, 50);
+      
+      window.setColor(Color.BLACK);
+      window.fillOval(460, 220, 50, 50);
+      
+      window.fillArc(310, 320, 200, 100, 0, -180);
    }
 }
