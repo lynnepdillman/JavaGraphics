@@ -1,10 +1,4 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-
-//Name - Lynne Dillman
-//Date - 3-2-19
-//Class - APCSA
-//Lab  - Shape
+package GraphicsUnit1;
 
 import java.awt.Font;
 import java.awt.Color;
@@ -17,36 +11,44 @@ import java.awt.event.ActionListener;
 
 public class ShapePanel extends JPanel
 {
-  public ShapePanel()
-  {
-    setBackground(Color.WHITE);
-    setVisible(true);
-  }
+    public ShapePanel()
+    {
+        setBackground(Color.WHITE);
+        setVisible(true);
+    }
 
-  public void update(Graphics window)
-  {
-    paint(window);
-  }
+    public void update(Graphics window)
+    {
+        paint(window);
+    }
 
-  /*
-   * All of your test code should be placed in paint.
-   */
-  public void paint(Graphics window)
-  {
-    window.setColor(Color.WHITE);
-    window.fillRect(0,0,getWidth(), getHeight());
-    window.setColor(Color.BLUE);
-    window.drawRect(20,20,getWidth()-40,getHeight()-40);
-    window.setFont(new Font("TAHOMA",Font.BOLD,18));
-    window.drawString("CREATE YOUR OWN SHAPE!",40,40);
-
-    Shape test1 = new Shape(100, 100, 100, 100, Color.BLUE);
-    test1.draw(window);
-
-    Shape test2 = new Shape(500, 150, 150, 200, Color.CYAN);
-    test2.draw(window);
-
-    Shape test3 = new Shape(150, 300, 250, 150, Color.MAGENTA);
-    test3.draw(window);
-  }
+    /*
+     *All of your test code should be placed in paint.
+     */
+    public void paint(Graphics window)
+    {
+        window.setColor(Color.WHITE);
+        window.fillRect(0,0,getWidth(), getHeight());
+        window.setColor(Color.BLUE);
+        window.drawRect(20,20,getWidth()-40,getHeight()-40);
+        window.setFont(new Font("TAHOMA",Font.BOLD,18));
+        window.drawString("CREATE YOUR OWN SHAPE!",40,40);
+        //instantiate a Shape
+	//tell your shape to draw
+        Shape myShape1 = new Shape(100,100,100,200,Color.GRAY);
+        myShape1.draw(window);
+        window.setColor(Color.BLUE);
+        window.drawString(myShape1.toString(), 40, 60);
+	//instantiate a Shape
+	//tell your shape to draw
+        Shape myShape2 = new Shape(250,100,80,160,Color.GRAY);
+        myShape2.draw(window);
+	//instantiate a Shape
+	//tell your shape to draw
+        Shape myShape3 = new Shape(380,100,60,120,Color.GREEN);
+        myShape3.draw(window);
+        
+        Shape myShape4 = new Shape(490,100,40,80,Color.GREEN);
+        myShape4.draw(window);   
+    }
 }
