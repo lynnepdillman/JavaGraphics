@@ -1,10 +1,4 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-
-//Name - Lynne Dillman
-//Date - 3-2-19
-//Class - APCSA
-//Lab  - BigHouse
+package GraphicsUnit1;
 
 import java.awt.Graphics;
 import java.awt.Color;
@@ -21,33 +15,25 @@ public class BigHouse extends Canvas
 
    public void paint( Graphics window )
    {
-      bigHouse(window);
+       bigHouse (window);
    }
 
    public void bigHouse( Graphics window )
    {
+      // house main body
       window.setColor(Color.BLUE);
-
       window.drawString( "BIG HOUSE ", 50, 50 );
-
       window.setColor(Color.BLUE);
-
-      window.fillRect( 200, 200, 400, 400 );
-      
-      // roof
-      window.setColor(Color.GREEN);
-      int[] xPoints = {200, 600, 400};
-      int[] yPoints = {200, 200, 0};
-      window.fillPolygon(xPoints, yPoints, 3);
-      
-      // windows
-      window.setColor(Color.YELLOW);
-      window.fillRect(250, 250, 100, 100);
-      window.fillRect(450, 250, 100, 100);
-      
+      window.fillRect( 100, 300, 400, 400 );
       // door
-      window.setColor(Color.GRAY);
-      window.fillRect(350, 400, 100, 200);
-
+      window.setColor(Color.RED);
+      window.fillRect( 150, 450, 100, 246 );
+      window.setColor(Color.WHITE);
+      window.fillRect( 300, 450, 150, 150 );
+      // roof polygon
+      int[] x = {300,50,550};
+      int[] y = {110,300,300};
+      window.setColor(Color.YELLOW);
+      window.fillPolygon(x, y, x.length);
    }
 }
